@@ -5,10 +5,14 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+html{
+    
+}
 body{
     background: #000;
     -webkit-font-smoothing: antialiased;
     color: #999;
+    
     
 }
 header{
@@ -46,6 +50,87 @@ header .logo img{
     position: relative;
     width: 250px;
     height: 40px;
+    
+}.movies{
+    padding: 20px 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.movie-col{
+    box-sizing: border-box;
+    font-size: 70%;
+    background: #000;
+    width: 20%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin: 40px 20px;
+    transition: 1s;
+    height: 100%;
+    overflow: hidden;
+}
+.movie-col .detials{
+    width: 100%;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: rgba(153, 153, 153, 0.211);
+    color: #fff;
+    transform: translateY(100%);
+    text-align: center;
+    transition: 1s;
+    height:100%;
+    overflow: hidden;
+}
+.movie-col .detials img{
+    padding: 20px 0px;
+    z-index: 1;
+   width: 50%;
+   height: auto;
+   margin-bottom: 20%;
+}
+.movie-col .detials .hero{
+    padding: 10px;
+    z-index: 1;
+}
+.movie-col .detials p{
+    z-index: 2;
+    padding: 10px 4px;
+}
+.details h1{
+    color: red;
+}
+.movie-col:hover img:first-child{
+    transition: 1s;
+    transform: scale(1.1);
+    filter: blur(20px);
+}
+.movie-col:hover .detials{
+    transition: 1s;
+    height: 100%;
+    transform: translateY(0);
+}
+.movie-col img{
+    z-index: 1;
+    overflow: hidden;
+    margin-bottom: -2%;
+    padding-bottom: 0px;
+    width:80%;
+    transition:1s;
+    image-resolution: 100%;
+    height: 100%;
+}
+
+.movie-col img{
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: center;
+    overflow: hidden;
 }
 .search input{
     position: absolute;
@@ -76,20 +161,111 @@ header .logo img{
 }
 
 @media(max-width: 991px){
+    .sticky h1{
+        margin-bottom: 20px;
+    }
+.movies{
+    padding: 20px 0;
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+.movie-col{
+    box-sizing: border-box;
+    font-size: 90%;
+    background: #000;
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 40px 20px;
+    transition: 1s;
+    height: 100%;
+    overflow: hidden;
+}
+.movie-col .detials{
+    width: 90%;
+    z-index: 2;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background: rgba(153, 153, 153, 0.211);
+    color: #fff;
+    transform: translateY(100%);
+    text-align: center;
+    transition: 1s;
+    height:100%;
+    overflow: hidden;
+}
+.movie-col .detials img{
+    padding: 20px 0px;
+    z-index: 1;
+   width: 50%;
+   height: auto;
+   margin-bottom: 20%;
+}
+.movie-col .detials .hero{
+    padding: 10px;
+    z-index: 1;
+}
+.movie-col .detials p{
+    z-index: 2;
+    padding: 10px 4px;
+}
+.details h1{
+    color: red;
+}
+.movie-col:hover img:first-child{
+    transition: 1s;
+    transform: scale(1.1);
+    filter: blur(20px);
+}
+.movie-col:hover .detials{
+    transition: 1s;
+    height: 100%;
+    transform: translateY(0);
+}
+.movie-col img{
+    z-index: 1;
+    overflow: hidden;
+    margin-bottom: -2%;
+    padding-bottom: 0px;
+    width:80%;
+    transition:1s;
+    image-resolution: 100%;
+    height: 100%;
+}
+
     header{
-        padding:20px 50px;
+        padding:10px 30px;
         flex-direction: column;
     }
+    .heading h1{
+        font-size: 2em;
+        overflow: hidden;
+    }
+
     .navigation{
         justify-content: center;
         flex-wrap: wrap;
-        margin: 10px 0;
+        margin: 20px ;
     }
-    
+    .search{
+        position: relative;
+        width: 250px;
+        height: 40px;
+        padding-bottom: 20px;
+        
+    }
 }
+
+
 .showcase {
     width: 100%;
     height: 100vh;
+    z-index: 3;
     position: relative;
     background: url('../resources/background.jpg');
     background-size: cover;
@@ -103,6 +279,7 @@ header .logo img{
     left: 0;
     width: 100%;
     height: 100%;
+    overflow: hidden;
     z-index: 1;
     background:rgba(0, 0, 0, 0.6);
     box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
@@ -156,6 +333,7 @@ text-decoration: none;
 }
 .btn-rounded{
     border-radius: 2rem;
+    margin: 15px 0px;
 
 }
 
@@ -170,24 +348,19 @@ text-decoration: none;
     text-transform: uppercase;
 }
 .marvel{
-    height: 100vh;
+    height: auto;
     width: 100%;
     background:url(../resources/Untitled-1.jpg) no-repeat;
     background-size:cover ;
     background-position-x: fill;
     background-position-y: top;
-    box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 250px #000000;
-
-}
-.content{
-    display: flex;
-    width: 98%;
-    margin: 0 auto;
+    box-shadow: inset 120px 100px 250px #000000, inset -120px -100px 450px #000000, inset -120px 100px 250px #000000;
 
 }
 .heading h1{
     text-align: center;
     position: relative;
+    width: 100%;
     margin:20px 0 0;
     font-size: 4em;
     font-weight: 900;
@@ -200,45 +373,56 @@ text-decoration: none;
 video{
     position: absolute;
     top: 0;
-    left: 0;
-    width: 30%;
+    left: 0%;
+    width: 100%;
     height: 100%;
     object-fit: cover;
     z-index: 2;
     pointer-events: none;
     mix-blend-mode: screen;
+    overflow: hidden;
 
 }
-.heading h1 :before{
-    content: '';
-    position: absolute;
-    left: 110%;
-    width: 120%;
-    height: 120%;
-    background: linear-gradient(90deg,transparent 0%, #000 5%, #000 100%);
-    animation: animate 3.5s linear backwards;
+.sticky h1 span{
+    display: inline-block;
+    opacity: 0;
+    animation: animate 2s linear forwards;
 }
 @keyframes animate{
 0%{
-left: -20%;
+opacity: 0;
+transform: rotateY(90deg);
+filter: blur(10px);
 }
 100%{
-    left: 20%;
+    opacity: 1;
+transform: rotateY(0deg);
+filter: blur(0);
 }
 }
+.sticky h1 span:nth-child(1){
+animation-delay: 2s;
+}
+.sticky h1 span:nth-child(2){
+animation-delay: 2.5s;
+color: #de0611;
+}
+.sticky h1 span:nth-child(3){
+animation-delay: 3s;
+}
+.sticky h1 span:nth-child(4){
+animation-delay: 3.5s;
+color: #de0611;
+}
+.sticky h1 span:nth-child(5){
+animation-delay: 3.75s;
+}
+.sticky h1 span:nth-child(6){
+animation-delay: 4s;
+color: #de0611;
+}
+
 .heading h1 span{
     color: #fff;
-    font-style:inherit;
     
-}
-.movie-col{
-    width: 22%;
-    background-color: rosybrown;
-    height: 50vh;
-    margin: 2%;
-    transition: 1s;
-}
-.movie-col:hover{
-    transition: 1s;
-    transform: translateY(-3%);
 }
