@@ -6,7 +6,7 @@
     box-sizing: border-box;
 }
 html{
-    
+    scroll-behavior: smooth;
 }
 body{
     background: #000;
@@ -58,6 +58,8 @@ header .logo img{
     display: flex;
     overflow: hidden;
     box-sizing: border-box;
+}.movie-col:hover{
+transform: translateY(-5%);
 }
 .movie-col{
     box-sizing: border-box;
@@ -86,9 +88,10 @@ header .logo img{
     height:100%;
     overflow: hidden;
 }
-.movie-col .detials img{
+.movie-col .detials a img{
     padding: 20px 0px;
-    z-index: 1;
+    filter: blur(0px);
+    z-index: 5;
    width: 50%;
    height: auto;
    margin-bottom: 20%;
@@ -98,16 +101,16 @@ header .logo img{
     z-index: 1;
 }
 .movie-col .detials p{
-    z-index: 2;
+    z-index: 1;
     padding: 10px 4px;
 }
 .details h1{
     color: red;
 }
-.movie-col:hover img:first-child{
+.movie-col:hover span img{
     transition: 1s;
     transform: scale(1.1);
-    filter: blur(20px);
+    filter: blur(14px);
 }
 .movie-col:hover .detials{
     transition: 1s;
@@ -206,10 +209,6 @@ header .logo img{
    height: auto;
    margin-bottom: 20%;
 }
-.movie-col .detials .hero{
-    padding: 10px;
-    z-index: 1;
-}
 .movie-col .detials p{
     z-index: 2;
     padding: 10px 4px;
@@ -217,7 +216,7 @@ header .logo img{
 .details h1{
     color: red;
 }
-.movie-col:hover img:first-child{
+.movie-col:hover span img{
     transition: 1s;
     transform: scale(1.1);
     filter: blur(20px);
@@ -420,6 +419,39 @@ animation-delay: 3.75s;
 .sticky h1 span:nth-child(6){
 animation-delay: 4s;
 color: #de0611;
+}
+
+
+.stick h1 span{
+    display: inline-block;
+    opacity: 0;
+    animation: animate 2s linear forwards;
+}
+@keyframes animate{
+0%{
+opacity: 0;
+transform: rotateY(90deg);
+filter: blur(10px);
+}
+100%{
+    opacity: 1;
+transform: rotateY(0deg);
+filter: blur(0);
+}
+}
+.stick h1 span:nth-child(1){
+animation-delay: 2s;
+}
+.stick h1 span:nth-child(2){
+animation-delay: 2.5s;
+color: #555;
+}
+.stick h1 span:nth-child(3){
+animation-delay: 3s;
+}
+.stick h1 span:nth-child(4){
+animation-delay: 3.5s;
+color: #555;
 }
 
 .heading h1 span{
