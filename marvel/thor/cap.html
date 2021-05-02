@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<meta charset="UTF-8">
+	<title>NETFLIX | CAPTAIN AMERICA</title>
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="./css/cap.css">
+	</head>
+<body>
+<header>
+	<a href="#" class="logo"><img src="./resources/logo.png"></a>
+	<ul class="navigation">
+		<li><a href="../../index.html">Home</a></li>
+		<li><a href="#">TV Shows</a></li>
+		<li><a href="#">Movies</a></li>
+		<li><a href="#">Latest</a></li>
+		<li><a href="#">My Lists</a></li>
+	</ul>
+	<div class="search">
+		<input type="text" placeholder="Search">
+		<i class="fas fa-search"></i>
+	</div>
+</header>
+<div class="banner">
+	<img src="./resources/bg.jpg"" class="bg">
+<div class="content">
+	<img src="./resources/cp.png" class="movieTitle">
+	<h4>
+		<span>2011</span>
+		<span><i>12+</i></span>
+		<span>3hr 1min </span>
+		<span>Action,Adventure,Drama</span>
+	</h4>
+	<p>After the devastating events of Avengers: Infinity War (2018), the universe is in ruins. With the help of remaining allies, the Avengers assemble once more in order to reverse Thanos' actions and restore balance to the universe.</p>
+	<div class="buttons">
+		<a href="#"><i class="fa fa-play"></i>Play</a>
+		<a href="#"><i class="fa fa-plus"></i>My List</a>
+	</div>
+	</div>
+		<a class="play" onclick="toggleVideo();"><img src="./resources/play.png">Watch Trailer</a>
+</div>
+ <div class="trailer">
+	 <video src="./resources/video.mkv" controls="true"></video>
+	 <img src="./resources/PngItem_2148729.png" class="close" onclick="toggleVideo();">
+ </div>
+
+ <script>
+	 function toggleVideo(){
+		 const trailer = document.querySelector('.trailer');
+		 const video = document.querySelector('video');
+		 trailer.classList.toggle('active')
+		 video.currentTime= 0;
+		 video.pause();
+	 }
+ </script>
+</body>
+</html>
+		
